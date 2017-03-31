@@ -1,0 +1,11 @@
+.draggable{
+    width: 50px;
+    padding: 2px;
+    height: 30px;
+    background-color: grey;
+}
+.droppable{
+    width:200px;
+    height: 200px;
+    background-color: lightpink;
+} 
