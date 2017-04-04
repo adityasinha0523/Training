@@ -1,0 +1,31 @@
+.listGroup
+{
+    font-size:1.2em;
+}
+
+.addBorder
+{
+    border:2px solid lightgreen;
+}
+
+.changeFontSize
+{
+    font-size: 1.2em;
+}
+
+.container
+{
+    width: 75%;
+    height: 50px;
+    margin:10px;
+    padding:20px;
+
+}
+
+.wrapper
+{
+    width: 75%;
+    height: 150px;
+    margin:10px;
+    padding:20px;
+}
