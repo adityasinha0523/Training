@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+    
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+
+            // event handler
+            $("button").on('click',function(){
+                
+                var passName=$("input:text").val();
+
+                console.log(passName);
+
+            })
+
+
+
+
+            $("#banner").html("Hello, jQuery!");
+             $(".listGroup").css('color','blue');
+             $("#coloredList",$("article")).css('background-color','blue');
+              $("#coloredList",$("article")).css('color','white');
+        });
+    
+    </script>
+</head>
+<body>
+
+   <header>
+        <h1 id ="banner"></h1>
+   </header> 
+
+   
+<section>
+
+    <article>
+        <ol class="listGroup">
+            <li> JavaScript</li>
+            <li> Bootstrap</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+        </ol>
+	
+
+     <ol class="listGroup" id="coloredList">
+         <li> JavaScript</li>
+            <li> Bootstrap</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+     </ol>
+      </article>
+  
+      <form id="mform" action="">
+
+          <label for="">Passenger name</label>
+          <input type="text" name="passName">
+
+
+           <label for="">Special Assistance</label>
+          <input type="checkbox" name="facility" value="wheelchair">
+          <input type="checkbox" name="facility" value="attendant">
+
+           <label for="">Food choice</label>
+          <input type="radio" name="food" value="veg">
+          <input type="radio" name="food" value="non-veg">
+
+          <label for="">City choice</label>
+          <select name="city" id="city">
+              <option value="bang">Bangalore</option>
+              <option value="mum">Mumbai</option>
+              <option value="kol">Kolkata</option>
+              <option value="del">Delhi</option>
+          </select>
+
+
+          <button id="readValue">Book</button>
+      </form>
+ </section>   
+</body>
+</html>
