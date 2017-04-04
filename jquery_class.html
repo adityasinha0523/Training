@@ -37,11 +37,25 @@
 
 </head>
 <body>
-    <div > New Division</div>
-    <div class="container">First</div>
-    <div class="container">Second</div>
-    <div class="container">Third</div>
-
+<div id="shippingAdress">
+            <input type="text" id="name" name="name" placeholder="name" />
+            <input type="text" id="phone" name="phone" placeholder="phone" />
+        </div>
+        <div id="billingAdress">
+            <input type="checkbox" id="sameAsAbove" />
+            <input type="text" id="name" name="name" placeholder="name" />
+            <input type="text" id="phone" name="phone" placeholder="phone" />
+        </div>
+        <script>
+            $(function(){
+                console.log($("sameAsAbove"));
+                $("#sameAsAbove").on("click",function(){
+                    console.log($("#billingAdress #name").val());
+                    $("#billingAdress #name").val($("#shippingAdress #name").val());
+                    $("#billingAdress #phone").val($("#shippingAdress #phone").val());
+                })
+            })
+        </script>
 
 </body>
 </html>
