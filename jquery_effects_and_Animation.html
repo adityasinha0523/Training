@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+                $("#less").hide();
+                $("#topic2").hide();
+                $("#more").on('click',function(){
+                    $("#topic2").show()
+                    $("#more").hide();
+                    $("#less").show();
+                })
+                $("#less").on('click',function(){
+                    $("#topic2").hide();
+                    $("#less").hide();
+                    $("#more").show();
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <section id="main">
+            <article id="topic1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sequi voluptas a non aliquid! Quam voluptates dolor ex ipsa, blanditiis hic distinctio placeat, mollitia accusantium vel doloribus nobis reiciendis cum.
+            </article>
+            <a href="#" id="more">More</a>
+            <article id="topic2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere minus maxime amet? Placeat beatae sequi laborum ratione velit necessitatibus dolorem, obcaecati, maiores, quis odio impedit ipsa. Suscipit ad deserunt harum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
+            </article>
+            <a href="#" id="less">Less</a>
+        </section>
+    </body>
+</html>
