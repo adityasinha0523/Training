@@ -12,6 +12,7 @@ app.init = function(){
     
     promise.done(function(data, status, xhr){
         app.updateDom(data);
+app.responseText=data;
     });
 
     promise.fail(function(data, status, xhr){
@@ -25,7 +26,8 @@ app.init = function(){
 }
 
 app.updateDom = function(data){
-    $("#placeholder").text(data);
+    $("#placeholder").text(JSON.stringify(data));
+
 }
 
 $(function(){
