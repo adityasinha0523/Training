@@ -8,28 +8,38 @@
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
         <script>
             $(function(){
-                $("#less").hide();
-                $("#topic2").hide();
+                $("#less,#topic2,nav").hide();
                 $("#more").on('click',function(){
-                    $("#topic2").show()
+                    $("#topic2,#less").fadeIn("slow");
                     $("#more").hide();
-                    $("#less").show();
+                    $("nav").slideDown();
+                    $("li").animate({"font-size":"1.5em"},1000).animate({"border-radius":"15px"},90);
                 })
                 $("#less").on('click',function(){
-                    $("#topic2").hide();
+                    $("#topic2").fadeOut("slow");
                     $("#less").hide();
                     $("#more").show();
+                    $("nav").slideUp();
+                    $("li").animate({"font-size":"1em"},1000).animate({"border-radius":"0px"},1000);
                 })
             })
         </script>
     </head>
-    <body>
+    <body style="background-color: black;">
+        <nav>
+            <ol>
+                <li><a href="jQuery.html">jQuery</a></li>
+                <li><a href="jQuery.html">Angular</a></li>
+                <li><a href="bootstrap.html">bootstrap</a></li>
+                <li><a href="Node.html">Nodejs</a></li>
+            </ol>
+        </nav>
         <section id="main">
-            <article id="topic1">
+            <article id="topic1" style="background-color:black;color:white">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sequi voluptas a non aliquid! Quam voluptates dolor ex ipsa, blanditiis hic distinctio placeat, mollitia accusantium vel doloribus nobis reiciendis cum.
             </article>
             <a href="#" id="more">More</a>
-            <article id="topic2">
+            <article id="topic2" style="background-color:black;color:white">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere minus maxime amet? Placeat beatae sequi laborum ratione velit necessitatibus dolorem, obcaecati, maiores, quis odio impedit ipsa. Suscipit ad deserunt harum.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsa, ipsam nulla voluptatem vitae pariatur obcaecati sequi dolorum sit harum illum, fugit, at quos nam qui similique molestias, necessitatibus nisi?
